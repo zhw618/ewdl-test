@@ -140,7 +140,7 @@ public:
       printf("IO Map size: %d > MAX_IO_MAP_SIZE: %lu\n", used_mem, sizeof(io_map));
       return false;
     }
-    printf("io_map size: %d", used_mem);
+    printf("io_map size: %d\n", used_mem);
 
 
     // print slaves configuration

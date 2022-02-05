@@ -118,6 +118,11 @@ void* control_loop(void* arg)
         int32 target_position = 0.5 * POSITION_STEP_FACTOR * (1 - std::cos(M_PI * esa::ewdl::ethercat::to_sec(t_cmd)));
         ec_master->rx_pdo[slave_idx].mode_of_operation = mode_of_operation;
         ec_master->rx_pdo[slave_idx].target_position = target_position;
+
+        //打印target_position值
+        if(iter%500 == 0){
+          printf("  target_position: %d\n",target_position);
+        }
       }
     }
 
